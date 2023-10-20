@@ -1,6 +1,11 @@
 {
   "name": "content-fodder",
   "type": "module",
+  "scripts": {
+    "dev": "bun run dev",
+    "pg:up": "docker compose up -d",
+    "pg:down": "docker compose down"
+  },
   "devDependencies": {
     "bun-types": "^1.0.1"
   },
