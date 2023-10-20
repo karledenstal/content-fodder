@@ -2,7 +2,7 @@
   "name": "content-fodder",
   "type": "module",
   "scripts": {
-    "dev": "bun run dev",
+    "dev": "bun run --watch main.ts",
     "pg:up": "docker compose up -d",
     "pg:down": "docker compose down"
   },
