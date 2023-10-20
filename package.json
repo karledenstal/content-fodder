@@ -2,14 +2,17 @@
   "name": "content-fodder",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch main.ts",
-    "pg:up": "docker compose up -d",
-    "pg:down": "docker compose down"
+    "dev": "bun run --watch ./src/main.ts",
+    "db:push": "bunx prisma db push",
+    "db:pull": "bunx prisma db pull",
+    "generate": "bunx prisma generate",
+    "studio": "bunx prisma studio"
   },
   "devDependencies": {
     "bun-types": "^1.0.1"
   },
   "dependencies": {
-    "elysia": "^0.6.19"
+    "elysia": "^0.6.19",
+    "prisma": "^5.4.2"
   }
 }

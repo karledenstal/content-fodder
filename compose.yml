@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: 'postgresql'
+    container_name: 'fodder-sql'
     image: 'postgres'
     ports: 
       - '5433:5432'
