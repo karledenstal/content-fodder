@@ -9,3 +9,35 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model organization {
+  id         Int      @id @default(autoincrement())
+  org_name   String
+  created_at DateTime @default(now())
+  status     String
+  slug       String
+}
+
+model site {
+  id         Int        @id @default(autoincrement())
+  site_name  String
+  org_id     Int
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  status     String
+  slug       String
+  api_keys   api_keys[]
+}
+
+model api_keys {
+  id         Int      @id @default(autoincrement())
+  api_key    String   @unique
+  site_id    Int
+  site       site     @relation(fields: [site_id], references: [id])
+  expires_at DateTime
+  revoked_at DateTime
+  status     String
+  scope      String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
