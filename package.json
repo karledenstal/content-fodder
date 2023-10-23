@@ -12,8 +12,11 @@
     "bun-types": "^1.0.1"
   },
   "dependencies": {
+    "@elysiajs/cookie": "^0.7.0",
+    "@elysiajs/cors": "^0.7.1",
+    "@elysiajs/jwt": "^0.7.0",
     "@prisma/client": "5.4.2",
-    "elysia": "^0.6.19",
+    "elysia": "latest",
     "prisma": "^5.4.2"
   }
 }

@@ -1,18 +1,11 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ESNext"
-    ],
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "bundler",
+    "target": "ES2021",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "types": ["bun-types"],
+    "esModuleInterop": true,
     "strict": true,
-    "downlevelIteration": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": [
-      "bun-types" // add Bun global
-    ]
+    "skipLibCheck": true
   }
 }

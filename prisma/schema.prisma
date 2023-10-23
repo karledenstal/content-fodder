@@ -12,7 +12,7 @@ datasource db {
 
 model organization {
   id         Int      @id @default(autoincrement())
-  org_name   String
+  org_name   String   @unique
   created_at DateTime @default(now())
   status     String
   slug       String
